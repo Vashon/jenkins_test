@@ -5,6 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                script {
+                    def workSpace = env["WORKSPACE"]
+                    echo workSpace
+                }
             }
         }
         stage('Test') {
